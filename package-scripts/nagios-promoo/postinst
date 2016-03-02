@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Perform necessary nagios-promoo setup steps
+# after package is installed.
+#
+
+PROGNAME=`basename $0`
+INSTALLER_DIR=`dirname $0`
+DEST_DIR=/opt/nagios-promoo
+CONFIG_DIR=/etc/nagios-promoo
+BIN_DIR=/usr/bin
+USAGE="usage: $0"
+
+function error_exit
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+# chown
+chown -R root:root $DEST_DIR || error_exit "Cannot chown $DEST_DIR to root:root"
+
+# symlink bin files into /usr/bin
+mkdir -p $BIN_DIR || error_exit "Cannot create $BIN_DIR"
+ln -sf $DEST_DIR/bin/nagios-promoo $BIN_DIR || error_exit "Cannot link $DEST_DIR/bin/nagios-promoo to $BIN_DIR"
+
+echo "Thank you for installing nagios-promoo!"
+
+exit 0

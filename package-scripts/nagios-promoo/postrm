@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Perform necessary nagios-promoo removal steps
+# after package is uninstalled.
+#
+
+PROGNAME=`basename $0`
+INSTALLER_DIR=`dirname $0`
+DEST_DIR=/opt/nagios-promoo
+CONFIG_DIR=/etc/nagios-promoo
+BIN_DIR=/usr/bin
+USAGE="usage: $0"
+
+function error_exit
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+if [ "X$1" = "Xupgrade" ] || [ "X$1" = "X1" ]; then
+  echo "Skipping clean-up, this is an upgrade!"
+  exit 0
+fi
+
+if [ -L "$BIN_DIR/nagios-promoo" ]; then
+  rm $BIN_DIR/nagios-promoo
+fi
+
+echo "nagios-promoo has been uninstalled!"
+
+exit 0
