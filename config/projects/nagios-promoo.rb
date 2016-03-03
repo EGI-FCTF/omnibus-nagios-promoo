@@ -17,6 +17,7 @@ dependency 'preparation'
 
 # nagios-promoo dependencies/components
 dependency 'nagios-promoo'
+dependency 'opennebula-cli'
 
 # version manifest file
 dependency 'version-manifest'
