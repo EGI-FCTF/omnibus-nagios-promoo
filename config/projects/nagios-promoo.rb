@@ -9,8 +9,8 @@ install_dir     "#{default_root}/#{name}"
 build_version   "1.1.0"
 build_iteration 1
 
-override :rubygems, :version => '2.4.8'
-override :ruby, :version => '2.1.9'
+override :rubygems, :version => '2.6.8'
+override :ruby, :version => '2.2.6'
 
 # creates required build directories
 dependency 'preparation'
