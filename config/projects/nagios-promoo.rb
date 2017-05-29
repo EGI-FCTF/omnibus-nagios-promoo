@@ -1,12 +1,12 @@
 name "nagios-promoo"
 maintainer "Boris Parak <parak@cesnet.cz>"
-homepage "https://github.com/EGI-FCTF/nagios-promoo"
+homepage "https://github.com/arax/nagios-promoo"
 description "Nagios Probes for Monitoring OpenNebula and OCCI"
 
 # Defaults to C:/nagios-promoo on Windows
 # and /opt/nagios-promoo on all other platforms
 install_dir     "#{default_root}/#{name}"
-build_version   "1.1.0"
+build_version   "1.2.0"
 build_iteration 1
 
 override :rubygems, :version => '2.6.8'
