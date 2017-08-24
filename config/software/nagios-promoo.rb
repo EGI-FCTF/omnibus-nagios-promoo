@@ -1,5 +1,5 @@
 name "nagios-promoo"
-default_version "1.3.1"
+default_version "1.4.0"
 
 dependency "ruby"
 dependency "rubygems"
