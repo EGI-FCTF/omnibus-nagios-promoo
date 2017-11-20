@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/chef/omnibus
-  revision: e3807801e61b9012ea2e0677a60c2bf72c0e4972
+  revision: cf8941758bc6094e1658715a49ae249f6c2a689c
   specs:
     omnibus (5.6.1)
       aws-sdk (~> 2)
@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/chef/omnibus-software
-  revision: db9cfd23c7ccbdd69a26f53ce52d72362953e8a7
+  revision: 4cb026cb63bbdb6e4b077a62fe0f8f8b5f7cb3d7
   specs:
     omnibus-software (4.0.0)
       chef-sugar (>= 3.4.0)
@@ -29,13 +29,13 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     awesome_print (1.8.0)
-    aws-sdk (2.10.61)
-      aws-sdk-resources (= 2.10.61)
-    aws-sdk-core (2.10.61)
+    aws-sdk (2.10.86)
+      aws-sdk-resources (= 2.10.86)
+    aws-sdk-core (2.10.86)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.61)
-      aws-sdk-core (= 2.10.61)
+    aws-sdk-resources (2.10.86)
+      aws-sdk-core (= 2.10.86)
     aws-sigv4 (1.0.2)
     berkshelf (6.3.1)
       buff-config (~> 2.0)
@@ -67,10 +67,10 @@ GEM
     celluloid-io (0.16.2)
       celluloid (>= 0.16.0)
       nio4r (>= 1.1.0)
-    chef (12.21.14)
+    chef (12.21.26)
       addressable
       bundler (>= 1.10)
-      chef-config (= 12.21.14)
+      chef-config (= 12.21.26)
       chef-zero (>= 4.8, < 13)
       diff-lcs (~> 1.2, >= 1.2.4)
       erubis (~> 2.7)
@@ -96,12 +96,12 @@ GEM
       specinfra (~> 2.10)
       syslog-logger (~> 1.6)
       uuidtools (~> 2.1.5)
-    chef-config (12.21.14)
+    chef-config (12.21.26)
       addressable
       fuzzyurl
       mixlib-config (~> 2.0)
       mixlib-shellout (~> 2.0)
-    chef-sugar (3.5.0)
+    chef-sugar (3.6.0)
     chef-zero (5.3.2)
       ffi-yajl (~> 2.2)
       hashie (>= 2.0, < 4.0)
@@ -147,14 +147,14 @@ GEM
     mixlib-authentication (1.4.2)
     mixlib-cli (1.7.0)
     mixlib-config (2.2.4)
-    mixlib-install (3.6.0)
+    mixlib-install (3.8.0)
       mixlib-shellout
       mixlib-versioning
       thor
     mixlib-log (1.7.1)
     mixlib-shellout (2.3.2)
     mixlib-versioning (1.2.2)
-    molinillo (0.6.3)
+    molinillo (0.6.4)
     multi_json (1.12.2)
     multipart-post (2.0.0)
     net-scp (1.2.1)
@@ -172,7 +172,7 @@ GEM
     nori (2.6.0)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
-    ohai (8.24.1)
+    ohai (8.25.1)
       chef-config (>= 12.5.0.alpha.1, < 14)
       ffi (~> 1.9)
       ffi-yajl (~> 2.2)
@@ -193,7 +193,7 @@ GEM
     plist (3.3.0)
     progressbar (1.9.0)
     proxifier (1.0.3)
-    public_suffix (3.0.0)
+    public_suffix (3.0.1)
     rack (2.0.3)
     retryable (2.0.4)
     ridley (5.1.1)
@@ -214,22 +214,22 @@ GEM
       retryable (~> 2.0)
       semverse (~> 2.0)
       varia_model (~> 0.6)
-    rspec (3.6.0)
-      rspec-core (~> 3.6.0)
-      rspec-expectations (~> 3.6.0)
-      rspec-mocks (~> 3.6.0)
-    rspec-core (3.6.0)
-      rspec-support (~> 3.6.0)
-    rspec-expectations (3.6.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.0)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
+      rspec-support (~> 3.7.0)
     rspec-its (1.2.0)
       rspec-core (>= 3.0.0)
       rspec-expectations (>= 3.0.0)
-    rspec-mocks (3.6.0)
+    rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
-    rspec-support (3.6.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.0)
     rspec_junit_formatter (0.2.3)
       builder (< 4)
       rspec-core (>= 2, < 4, != 2.12.0)
@@ -241,7 +241,7 @@ GEM
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
     semverse (2.0.0)
-    serverspec (2.41.0)
+    serverspec (2.41.3)
       multi_json
       rspec (~> 3.0)
       rspec-its
@@ -250,14 +250,14 @@ GEM
     solve (4.0.0)
       molinillo (~> 0.6)
       semverse (>= 1.1, < 3.0)
-    specinfra (2.72.0)
+    specinfra (2.72.1)
       net-scp
       net-ssh (>= 2.7, < 5.0)
       net-telnet
       sfl
     syslog-logger (1.6.8)
     systemu (2.6.5)
-    test-kitchen (1.18.0)
+    test-kitchen (1.19.1)
       mixlib-install (~> 3.6)
       mixlib-shellout (>= 1.2, < 3.0)
       net-scp (~> 1.1)
@@ -306,4 +306,4 @@ DEPENDENCIES
   test-kitchen
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

@@ -1,5 +1,5 @@
 name "opennebula-cli"
-default_version "5.4.0"
+default_version "5.4.3"
 
 dependency "ruby"
 dependency "rubygems"

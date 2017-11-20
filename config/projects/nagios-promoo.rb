@@ -6,11 +6,11 @@ description "Nagios Probes for Monitoring OpenNebula and OCCI"
 # Defaults to C:/nagios-promoo on Windows
 # and /opt/nagios-promoo on all other platforms
 install_dir     "#{default_root}/#{name}"
-build_version   "1.5.0"
+build_version   "1.6.0"
 build_iteration 1
 
 override :rubygems, :version => '2.6.8'
-override :ruby, :version => '2.2.6'
+override :ruby, :version => '2.2.8'
 
 # creates required build directories
 dependency 'preparation'
